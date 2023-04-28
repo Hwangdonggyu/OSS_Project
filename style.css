@@ -1,0 +1,31 @@
+.container {
+    font-family: 'Lilita One', cursive;
+    font-weight: 900;
+    font-size: 50px;
+    margin: 25px;
+    width: 350px;
+    height: 200px; /* 폰트 설정 */
+
+    text-align:center;
+    padding-right: 350px;
+
+    margin:0 auto; 
+    width:300px; 
+    height:100px; 
+  }
+.title {
+    padding-left: 80px;
+}
+.box {
+    text-align:center;
+    margin:0 auto; 
+    width:600px; 
+    height:100px;
+    float: left; 
+}
+#search_input {
+    text-align:center; width: 400px; height: 30px; padding: 0 20px; display: inline-block;
+}
+#submit_input {
+    text-align:center; height: 35px; padding: 0 10px; display: inline-block;
+}
