@@ -23,7 +23,7 @@
     height:100px;
     float: left; 
 }
-#search_input {
+#search_select {
     text-align:center; width: 400px; height: 30px; padding: 0 20px; display: inline-block;
 }
 #submit_input {
