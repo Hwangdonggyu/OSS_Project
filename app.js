@@ -1,3 +1,17 @@
 // JavaScript code here
+let express = require('express');
+let bodyParser = require('body-parser');
+let fs = require('fs');
+let app = express();
+app.use(bodyParser.urlencoded({extended: false}))
+app.locals.pretty = true;
 
-<a href="https://www.naver.com">네이버 사이트로 이동!</a> // 코드 이동하는 코드입니다! 이걸 이용해서 페이지를 이동하면 됩니다~
+app.get(['/','/:area'],function(req,res){
+    // app.get
+})
+
+app.post('/',function(req,res){
+    let area = req.body.select;
+    res.redirect('/'+area);
+})
+
