@@ -1,0 +1,44 @@
+#result {
+    display:none;
+    background-color:white;
+    width: 1250px;
+    text-align:center;
+    border-radius:20px;
+    margin:70px auto 0;
+    padding: 50px 50px;
+}
+
+.result_text{
+    font-size:48px;
+    font-weight:100px;
+    font-family: 'Nanum Pen Script', cursive;
+}
+
+.result_box {
+    width:90%; 
+    max-width:470px;
+    background: linear-gradient(135deg,#00feba, #5b548a);
+    margin:30px auto 0;
+    color:#fff;
+    border-radius:20px;
+    padding: 5px 35px 40px 35px; 
+    text-align:center;
+}
+
+.cloth{
+    margin-top:30px;
+}
+
+.weather_result{
+    background-color: red;
+    width:1000px;
+    height:300px;
+    margin:auto;
+}
+
+.cloth_result{
+    background-color: blue;
+    width:1000px;
+    height:500px;
+    margin:auto;
+}

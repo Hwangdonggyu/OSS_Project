@@ -1,0 +1,19 @@
+@keyframes fadeIn {
+    from { opacity: 0; }     /*opacity: 투명도. 0이면 투명, 1이면 불투명*/
+    to { opacity: 1; }
+ } 
+ 
+ @keyframes fadeOut {
+     from { opacity: 1; }     
+     to { opacity: 0; }
+  } 
+
+.fadeIn{
+   animation: fadeIn;
+   animation-duration: 0.5s;
+}
+ 
+.fadeOut{
+   animation: fadeOut;
+   animation-duration: 0.5s;
+}
