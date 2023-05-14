@@ -22,7 +22,36 @@
     padding: 20px 35px; 
     text-align:center;
 }
+/* .h_area1, .h_area2 {
+    font-family: 'Nanum Pen Script', cursive;
+    height:30px;
+    font-size:18px;
+    width:80px;
+} */
 
+.h_area1, .h_area2{
+    width: 120px;
+    height:30px;
+    font-size: 18px;
+    border: 1px solid #999;
+    background: #fff;
+    border-top: none;
+    margin: 1px 0 0 -1px;
+    cursor: pointer;
+    font-family: 'Nanum Pen Script', cursive;
+}
+.submit{
+    border:0;
+    outline:0;
+    background:#ebfffc;
+    border-radius:50%;
+    width:40px;
+    height:40px;
+    cursor:pointer;
+}
+.submit:hover, .submit:focus{
+    background-color:#a3c2be;
+}
 .search {
     width:100%;
     display:flex;
