@@ -58,4 +58,15 @@ async function checkWeather(city){
 searchBtn.addEventListener("click", ()=>{
     begin();
     checkWeather(searchBox.value);
-})  
+})
+
+function doaction(){
+    main.style.animation="fadeIn 1s";
+    setTimeout(() => {
+        result.style.animation="fadeOut 1s";
+        setTimeout(() => {
+            main.style.display = "block";  //display 꺼줌
+            result.style.display = "none";  //display 켜줌
+        }, 450)
+    }, 450);
+}
