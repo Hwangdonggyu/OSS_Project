@@ -4,7 +4,7 @@
     width: 1250px;
     text-align:center;
     border-radius:20px;
-    margin:70px auto 0;
+    margin:70px auto 70px;
     padding: 50px 50px;
 }
 
@@ -45,7 +45,7 @@
 
 .return{
     width:90%; 
-    font-size: 20px;
+    font-size: 30px;
     max-width:250px;
     background: linear-gradient(135deg,#00feba, #5b548a);
     margin:30px auto 0;
@@ -55,6 +55,8 @@
     padding: 20px 35px; 
     text-align:center;
     cursor:pointer;
+    font-family: 'Nanum Pen Script', cursive;
+
 }
 
 .return:hover, .return:focus, .return:active{
