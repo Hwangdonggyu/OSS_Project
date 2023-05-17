@@ -1,3 +1,6 @@
+*{
+    list-style:none;
+}
 #result {
     display:none;
     background-color:white;
@@ -7,13 +10,18 @@
     margin:70px auto 70px;
     padding: 50px 50px;
 }
-
+.result {    
+    padding-top:70px;
+    display:flex;
+}
 .result_text{
     font-size:48px;
     font-weight:100px;
     font-family: 'Nanum Pen Script', cursive;
 }
-
+.result > li {
+    flex:1;
+}
 .result_box {
     width:90%; 
     max-width:470px;
@@ -53,6 +61,8 @@
     border-radius:20px;
     border: none;
     padding: 20px 35px; 
+    margin-top:70px;
+    margin-bottom:80px;
     text-align:center;
     cursor:pointer;
     font-family: 'Nanum Pen Script', cursive;
