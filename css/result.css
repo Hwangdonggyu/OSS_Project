@@ -1,19 +1,27 @@
+*{
+    list-style:none;
+}
 #result {
     display:none;
     background-color:white;
     width: 1250px;
     text-align:center;
     border-radius:20px;
-    margin:70px auto 0;
+    margin:70px auto 70px;
     padding: 50px 50px;
 }
-
+.result {    
+    padding-top:70px;
+    display:flex;
+}
 .result_text{
     font-size:48px;
     font-weight:100px;
     font-family: 'Nanum Pen Script', cursive;
 }
-
+.result > li {
+    flex:1;
+}
 .result_box {
     width:90%; 
     max-width:470px;
@@ -45,7 +53,7 @@
 
 .return{
     width:90%; 
-    font-size: 20px;
+    font-size: 30px;
     max-width:250px;
     background: linear-gradient(135deg,#00feba, #5b548a);
     margin:30px auto 0;
@@ -53,8 +61,12 @@
     border-radius:20px;
     border: none;
     padding: 20px 35px; 
+    margin-top:70px;
+    margin-bottom:80px;
     text-align:center;
     cursor:pointer;
+    font-family: 'Nanum Pen Script', cursive;
+
 }
 
 .return:hover, .return:focus, .return:active{
