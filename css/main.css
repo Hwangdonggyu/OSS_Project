@@ -22,21 +22,15 @@
     padding: 20px 35px; 
     text-align:center;
 }
-/* .h_area1, .h_area2 {
-    font-family: 'Nanum Pen Script', cursive;
-    height:30px;
-    font-size:18px;
-    width:80px;
-} */
 
-.h_area1, .h_area2{
+#searchBox{
     width: 120px;
     height:30px;
     font-size: 18px;
     border: 1px solid #999;
     background: #fff;
     border-top: none;
-    margin: 1px 0 0 -1px;
+    margin: 1px 0 0 120px;
     cursor: pointer;
     font-family: 'Nanum Pen Script', cursive;
 }
