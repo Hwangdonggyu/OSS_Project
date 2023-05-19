@@ -23,6 +23,29 @@
     text-align:center;
 }
 
+#searchBox{
+    width: 120px;
+    height:30px;
+    font-size: 18px;
+    border: 1px solid #999;
+    background: #fff;
+    border-top: none;
+    margin: 1px 0 0 25px;
+    cursor: pointer;
+    font-family: 'Nanum Pen Script', cursive;
+}
+.submit{
+    border:0;
+    outline:0;
+    background:#ebfffc;
+    border-radius:50%;
+    width:40px;
+    height:40px;
+    cursor:pointer;
+}
+.submit:hover, .submit:focus{
+    background-color:#a3c2be;
+}
 .search {
     width:100%;
     display:flex;
@@ -86,7 +109,6 @@
     font-size:28px;
     margin-top:-6px;
 }
-
 .weather{
     display:none;
 }
@@ -96,4 +118,15 @@
     font-size:14px;
     margin-top:10px;
     display:none;
+}
+
+#check_m_g{
+    width: 120px;
+    height:30px;
+    font-size: 18px;
+    border: 1px solid #999;
+    background: #fff;
+    border-top: none;
+    cursor: pointer;
+    font-family: 'Nanum Pen Script', cursive;
 }
