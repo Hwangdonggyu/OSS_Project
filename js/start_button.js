@@ -50,6 +50,9 @@ async function checkWeather(city){
             weatherIcon.src = "./image/mist.png";
         }
 
+        todayClothes(data);
+
+
         document.querySelector(".weather").style.display = "block";
         document.querySelector(".error").style.display= "none";
 
