@@ -1,4 +1,5 @@
 const clothIcon = document.querySelector(".cloth-icon");
+const check_m_g = document.querySelector("#check_m_g"); //성별 선택
 
 function todayClothes(data) {
     let todayTemp = data.main.temp;
@@ -13,28 +14,68 @@ function todayClothes(data) {
     let summer = todayTemp >= 28;
 
     if(winter) {
-        clothIcon.src = ".";
+        if(check_m_g.value === "man"){ //남자 옷
+            clothIcon.src = ".";
+        }
+        else if(check_m_g.value === "girl"){ // 여자 옷
+            clothIcon.src = ".";
+        }
     }
     else if(earlyWinter) {
-        clothIcon.src = "";
+        if(check_m_g.value === "man"){ //남자 옷
+            clothIcon.src = ".";
+        }
+        else if(check_m_g.value === "girl"){ // 여자 옷
+            clothIcon.src = ".";
+        }
     }
     else if(beginWinter) {
-        clothIcon.src = ""
+        if(check_m_g.value === "man"){ //남자 옷
+            clothIcon.src = ".";
+        }
+        else if(check_m_g.value === "girl"){ // 여자 옷
+            clothIcon.src = ".";
+        }
     }
     else if(fall) {
-        clothIcon.src = ""
+        if(check_m_g.value === "man"){ //남자 옷
+            clothIcon.src = ".";
+        }
+        else if(check_m_g.value === "girl"){ // 여자 옷
+            clothIcon.src = ".";
+        }
     }
     else if(earlyFall) {
-        clothIcon.src = "./image/earlyWinter.png"
+        if(check_m_g.value === "man"){ //남자 옷
+            clothIcon.src = "./image/earlyWinter.png"
+        }
+        else if(check_m_g.value === "girl"){ // 여자 옷
+            clothIcon.src = "./image/earlyWinter.png"
+        }
     }
     else if(earlySummer) {
-        clothIcon.src = ""
+        if(check_m_g.value === "man"){ //남자 옷
+            clothIcon.src = ".";
+        }
+        else if(check_m_g.value === "girl"){ // 여자 옷
+            clothIcon.src = ".";
+        }
     }
     else if(beginSummer) {
-        clothIcon.src = ""
+        if(check_m_g.value === "man"){ //남자 옷
+            clothIcon.src = ".";
+        }
+        else if(check_m_g.value === "girl"){ // 여자 옷
+            clothIcon.src = ".";
+        }
     }
     else if(summer) {
-        clothIcon.src = ""
+        if(check_m_g.value === "man"){ //남자 옷
+            clothIcon.src = ".";
+        }
+        else if(check_m_g.value === "girl"){ // 여자 옷
+            clothIcon.src = ".";
+        }
     }
 
 }
