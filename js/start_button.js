@@ -2,6 +2,8 @@ const apiKey = "02b49f3f0bfb423b6ec8846c057d4ba4";
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
 const apiUrl_dust = "http://api.openweathermap.org/data/2.5/air_pollution?"; //lat={lat}&lon={lon}&appid={API key}
+// 37이상 나쁨
+// 구현해야 할 것 : 엔터키로 넘어가게 하기, 그냥 서치 눌렀을 때 에러 페이지(안넘어가게)
 
 const searchBox = document.querySelector("#searchBox");  
 const searchBtn = document.querySelector(".search button");

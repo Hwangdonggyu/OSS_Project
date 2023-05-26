@@ -30,7 +30,7 @@
     border: 1px solid #999;
     background: #fff;
     border-top: none;
-    margin: 1px 0 0 25px;
+    margin: 1px 0 0 120px;
     cursor: pointer;
     font-family: 'Nanum Pen Script', cursive;
 }
@@ -118,15 +118,4 @@
     font-size:14px;
     margin-top:10px;
     display:none;
-}
-
-#check_m_g{
-    width: 120px;
-    height:30px;
-    font-size: 18px;
-    border: 1px solid #999;
-    background: #fff;
-    border-top: none;
-    cursor: pointer;
-    font-family: 'Nanum Pen Script', cursive;
 }
