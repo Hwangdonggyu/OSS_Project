@@ -1,12 +1,16 @@
 const apiKey = "02b49f3f0bfb423b6ec8846c057d4ba4";
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
+const apiUrl_dust = "http://api.openweathermap.org/data/2.5/air_pollution?"; //lat={lat}&lon={lon}&appid={API key}
+
 const searchBox = document.querySelector("#searchBox");  
 const searchBtn = document.querySelector(".search button");
 const weatherIcon = document.querySelector(".weather-icon");
 const main = document.querySelector('#main');
 const result = document.querySelector('#result');
 
+let lat_ = null;
+let lon_ = null;
 
 function begin(){
     main.style.animation="fadeOut 1s";
@@ -21,7 +25,7 @@ function begin(){
 
 async function checkWeather(city){
     const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
-
+    
     if(response.status == 404){
         document.querySelector(".error").style.display= "block";
         document.querySelector(".weather").style.display= "none";
@@ -32,6 +36,12 @@ async function checkWeather(city){
         document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°C";
         document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
         document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
+
+        lat_ = data.coord.lat;
+        lon_ = data.coord.lon;
+
+        const response_dust = await fetch(apiUrl_dust + "lat=" + lat_ + "&lon=" + lon_ + "&appid=" + apiKey);
+        console.log(response_dust.json());
 
         if(data.weather[0].main == "Clouds") {
             weatherIcon.src = "./image/clouds.png";
