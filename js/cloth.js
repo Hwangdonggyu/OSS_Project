@@ -1,6 +1,7 @@
 const clothIcon = document.querySelector(".cloth-icon");
 const check_m_g = document.querySelector("#check_m_g"); //성별 선택
 
+
 function todayClothes(data) {
     let todayTemp = data.main.temp;
 
