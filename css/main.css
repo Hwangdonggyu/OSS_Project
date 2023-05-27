@@ -15,7 +15,9 @@
 .box {
     width:90%; 
     max-width:470px;
-    background: linear-gradient(135deg,#00feba, #5b548a);
+    background: #74ebd5;
+    background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);
+    background: linear-gradient(to right, #ACB6E5, #74ebd5);
     margin:30px auto 0;
     color:#fff;
     border-radius:20px;
@@ -101,11 +103,18 @@
     align-items:center;
     text-align:left;
 }
-.col img{
+.col2{
+    margin-top:20px;
+    justify-content:center;
+    display:flex;
+    align-items:center;
+    text-align:left;
+}
+.col img, .col2 img{
     width:40px;
     margin-right:10px;
 }
-.humidity, .wind{
+.humidity, .wind, .dust{
     font-size:28px;
     margin-top:-6px;
 }
