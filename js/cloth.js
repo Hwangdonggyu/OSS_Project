@@ -4,37 +4,37 @@ const clothIcon = document.querySelector(".cloth-icon");
 function todayClothes(data) {
     let todayTemp = data.main.temp;
 
-    let winter = todayTemp <= 4;
-    let earlyWinter = todayTemp >= 5 && todayTemp < 9;
-    let beginWinter = todayTemp >= 9 && todayTemp < 12;
+    let midWinter = todayTemp <= 4;
+    let winter = todayTemp >= 5 && todayTemp < 9;
+    let startWinter = todayTemp >= 9 && todayTemp < 12;
     let fall = todayTemp >= 12 && todayTemp < 17;
-    let earlyFall = todayTemp >= 17 && todayTemp < 20;
-    let earlySummer = todayTemp >= 20 && todayTemp < 23;
-    let beginSummer = todayTemp >= 23 && todayTemp < 28;
-    let summer = todayTemp >= 28;
+    let startFall= todayTemp >= 17 && todayTemp < 20;
+    let startSummer = todayTemp >= 20 && todayTemp < 23;
+    let summer = todayTemp >= 23 && todayTemp < 28;
+    let midSummer = todayTemp >= 28;
 
-    if(winter) {
+    if(midWinter) {
         clothIcon.src = ".";
     }
-    else if(earlyWinter) {
+    else if(winter) {
         clothIcon.src = ".";
     }
-    else if(beginWinter) {
+    else if(startWinter) {
         clothIcon.src = ".";
     }
     else if(fall) {
         clothIcon.src = ".";
     }
-    else if(earlyFall) {
+    else if(startFall) {
         clothIcon.src = "./image/earlyWinter.png"
     }
-    else if(earlySummer) {
-        clothIcon.src = ".";
-    }
-    else if(beginSummer) {
+    else if(startSummer) {
         clothIcon.src = ".";
     }
     else if(summer) {
+        clothIcon.src = ".";
+    }
+    else if(midSummer) {
         clothIcon.src = ".";
     }
 
