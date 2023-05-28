@@ -15,6 +15,10 @@ let lat_ = null;
 let lon_ = null;
 
 function begin(){
+    if(searchBox.value === 'none'){
+        alert("지역을 선택해 주세요");
+    }
+    else{
     main.style.animation="fadeOut 1s";
     setTimeout(() => {
         result.style.animation="fadeIn 1s";
@@ -23,6 +27,7 @@ function begin(){
             result.style.display = "block";  //display 켜줌
         }, 450)
     }, 450);
+}
 }
 
 async function checkWeather(city){
@@ -38,13 +43,12 @@ async function checkWeather(city){
         document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°C";
         document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
         document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
-        document.querySelector(".dust").innerHTML = data.coord.lat + " ㎍/㎥";  //미세먼지
 
         lat_ = data.coord.lat;
         lon_ = data.coord.lon;
 
         const response_dust = await fetch(apiUrl_dust + "lat=" + lat_ + "&lon=" + lon_ + "&appid=" + apiKey);
-        console.log(response_dust.json()); 
+        console.log(response_dust.json());
 
         if(data.weather[0].main == "Clouds") {
             weatherIcon.src = "./image/clouds.png";
