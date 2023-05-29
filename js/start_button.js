@@ -82,6 +82,13 @@ function doaction(){
         setTimeout(() => {
             main.style.display = "block";  //display 꺼줌
             result.style.display = "none";  //display 켜줌
+
+            const selected = document.querySelector('.dropdown .selected');
+            selected.innerText = "-지역 선택-";
+            const options = document.querySelectorAll('.dropdown .menu li');
+            options.forEach(option => {
+            option.classList.remove('active');
+         })
         }, 450)
     }, 450);
 }
