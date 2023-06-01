@@ -72,6 +72,7 @@ async function checkWeather(city){
         }
         else if(data.weather[0].main == "Rain") {
             weatherIcon.src = "./image/rain.png";
+            const umbrella = "비가 오니 우산을 챙기세요!"; // 비가오면 우산을 챙겨야 합니다!
         }
         else if(data.weather[0].main == "Drizzle") {
             weatherIcon.src = "./image/drizzle.png";
