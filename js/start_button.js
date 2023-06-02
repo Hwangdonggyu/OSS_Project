@@ -54,9 +54,11 @@ async function checkWeather(city){
         }
         else if(data_dust.list[0].components.pm10 < 75) {
             degree = "미세먼지 나쁨";
+            document.querySelector(".mask").innerHTML = "공기가 안좋으니 마스크를 챙기세요!";
         }
         else if(data_dust.list[0].components.pm10 >= 75 ) {
             degree = "미세먼지 매우나쁨";
+            document.querySelector(".mask").innerHTML = "공기가 안좋으니 마스크를 챙기세요!";
         }
 
         document.querySelector(".dust").innerHTML = data_dust.list[0].components.pm10 + " ㎍/㎥";  //미세먼지
@@ -72,7 +74,7 @@ async function checkWeather(city){
         }
         else if(data.weather[0].main == "Rain") {
             weatherIcon.src = "./image/rain.png";
-            const umbrella = "비가 오니 우산을 챙기세요!"; // 비가오면 우산을 챙겨야 합니다!
+            document.querySelector(".umbrella").innerHTML = "비가오니 우산을 챙기세요!";
         }
         else if(data.weather[0].main == "Drizzle") {
             weatherIcon.src = "./image/drizzle.png";
