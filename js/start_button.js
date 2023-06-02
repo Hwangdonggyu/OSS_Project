@@ -13,6 +13,7 @@ const dropdowns = document.querySelectorAll('.dropdown');
 
 let lat_ = null;
 let lon_ = null;
+let degree = null;
 
 function begin(){
     main.style.animation="fadeOut 1s";
@@ -43,7 +44,25 @@ async function checkWeather(city){
         lon_ = data.coord.lon;
 
         const response_dust = await fetch(apiUrl_dust + "lat=" + lat_ + "&lon=" + lon_ + "&appid=" + apiKey);
-        console.log(response_dust.json());
+        var data_dust = await response_dust.json()
+
+        if(data_dust.list[0].components.pm10 < 20) {
+            degree = "미세먼지 좋음";
+        }
+        else if(data_dust.list[0].components.pm10 < 45) {
+            degree = "미세먼지 보통";
+        }
+        else if(data_dust.list[0].components.pm10 < 75) {
+            degree = "미세먼지 나쁨";
+        }
+        else if(data_dust.list[0].components.pm10 >= 75 ) {
+            degree = "미세먼지 매우나쁨";
+        }
+
+        document.querySelector(".dust").innerHTML = data_dust.list[0].components.pm10 + " ㎍/㎥";  //미세먼지
+        document.querySelector(".degree").innerHTML = degree;
+
+        if(data.coord.lat)
 
         if(data.weather[0].main == "Clouds") {
             weatherIcon.src = "./image/clouds.png";
@@ -53,6 +72,7 @@ async function checkWeather(city){
         }
         else if(data.weather[0].main == "Rain") {
             weatherIcon.src = "./image/rain.png";
+            const umbrella = "비가 오니 우산을 챙기세요!"; // 비가오면 우산을 챙겨야 합니다!
         }
         else if(data.weather[0].main == "Drizzle") {
             weatherIcon.src = "./image/drizzle.png";
@@ -100,7 +120,7 @@ dropdowns.forEach(dropdown => {
         caret.classList.toggle('caret-rotate');
         menu.classList.toggle('menu-open');
     });
-
+ 
     options.forEach(option => {
         option.addEventListener('click', () => {
             selected.innerText = option.innerText;
