@@ -14,28 +14,28 @@ function todayClothes(data) {
     let midSummer = todayTemp >= 28;
 
     if(midWinter) {
-        clothIcon.src = ".";
+        clothIcon.src = "./image/midwinter.png";
     }
     else if(winter) {
-        clothIcon.src = ".";
+        clothIcon.src = "./image/winter.png";
     }
     else if(startWinter) {
-        clothIcon.src = ".";
+        clothIcon.src = "./image/startwinter.png";
     }
     else if(fall) {
-        clothIcon.src = ".";
+        clothIcon.src = "./image/fall.png";
     }
     else if(startFall) {
-        clothIcon.src = "./image/earlyWinter.png"
+        clothIcon.src = "./image/startfall.png"
     }
     else if(startSummer) {
-        clothIcon.src = ".";
+        clothIcon.src = "./image/startsummer.png";
     }
     else if(summer) {
-        clothIcon.src = ".";
+        clothIcon.src = "./image/summer.png";
     }
     else if(midSummer) {
-        clothIcon.src = ".";
+        clothIcon.src = "./image/midsummer.png";
     }
 
 }
