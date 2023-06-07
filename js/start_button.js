@@ -48,9 +48,12 @@ async function checkWeather(city){
 
         if(data_dust.list[0].components.pm10 < 20) {
             degree = "미세먼지 좋음";
+            document.querySelector(".mask").innerHTML = "마스크를 챙기지 않아도 됩니다!";
         }
         else if(data_dust.list[0].components.pm10 < 45) {
             degree = "미세먼지 보통";
+            document.querySelector(".mask").innerHTML = "마스크를 챙기지 않아도 됩니다!";
+
         }
         else if(data_dust.list[0].components.pm10 < 75) {
             degree = "미세먼지 나쁨";
@@ -60,6 +63,7 @@ async function checkWeather(city){
             degree = "미세먼지 매우나쁨";
             document.querySelector(".mask").innerHTML = "공기가 안좋으니 마스크를 챙기세요!";
         }
+        
 
         document.querySelector(".dust").innerHTML = data_dust.list[0].components.pm10 + " ㎍/㎥";  //미세먼지
         document.querySelector(".degree").innerHTML = degree;
@@ -68,9 +72,11 @@ async function checkWeather(city){
 
         if(data.weather[0].main == "Clouds") {
             weatherIcon.src = "./image/clouds.png";
+            document.querySelector(".umbrella").innerHTML = "우산을 챙기지 않아도 됩니다!";
         }
         else if(data.weather[0].main == "Clear") {
             weatherIcon.src = "./image/clear.png";
+            document.querySelector(".umbrella").innerHTML = "우산을 챙기지 않아도 됩니다!";
         }
         else if(data.weather[0].main == "Rain") {
             weatherIcon.src = "./image/rain.png";
@@ -78,9 +84,11 @@ async function checkWeather(city){
         }
         else if(data.weather[0].main == "Drizzle") {
             weatherIcon.src = "./image/drizzle.png";
+            document.querySelector(".umbrella").innerHTML = "우산을 챙기지 않아도 됩니다!";
         }
         else if(data.weather[0].main == "Mist") {
             weatherIcon.src = "./image/mist.png";
+            document.querySelector(".umbrella").innerHTML = "우산을 챙기지 않아도 됩니다!";
         }
 
         todayClothes(data);
