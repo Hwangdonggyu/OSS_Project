@@ -31,6 +31,67 @@
     padding: 5px 35px 40px 35px; 
     text-align:center;
 }
+.weather-icon{
+    width:170px;
+    margin-top:30px;
+}
+.weather h1{
+    font-size:80px;
+    font-weight:500;
+}
+.weather h2{
+    font-size:45px;
+    font-weight:400;
+    margin-top:-10px;
+}
+.details{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 20px;
+    margin-top:50px;
+}
+.col{
+    display:flex;
+    align-items:center;
+    text-align:left;
+}
+.col2{
+    margin-top:20px;
+    justify-content:center;
+    display:flex;
+    align-items:center;
+    text-align:left;
+}
+.col img, .col2 img{
+    width:40px;
+    margin-right:10px;
+}
+.humidity, .wind, .dust{
+    font-size:28px;
+    margin-top:-6px;
+}
+.col3{
+    padding-top:20px;
+    height:40px;
+    margin-bottom:20px;
+    justify-content:center;
+    display:flex;
+    align-items:center;
+    text-align:left;
+}
+.col4{
+    justify-content:center;
+    display:flex;
+    align-items:center;
+    text-align:left;
+}
+.col3 img {
+    padding-right:10px;
+}
+.weather{
+    display:none;
+}
 .cloth{
     margin-top:30px;
 }
@@ -58,3 +119,29 @@
 .return:hover, .return:focus, .return:active{
     background:#579a91;
 }
+.cloth-text1 {
+    background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+    background-position: 0 88%;
+    transition: background-size 0.25s ease-in;
+    font-size:40px;
+    font-family: 'Nanum Pen Script', cursive;
+    font:grey;
+  }
+  .cloth-text1:hover{
+    background-size: 100% 100%;
+  }
+.cloth-text2 {
+    font-size:28px;
+    font-family: 'Nanum Pen Script', cursive;
+}
+.cloth-box {
+    width:620px;
+    height:670px;
+    border: 8px solid; 
+    border-image: linear-gradient(to right, #ACB6E5, #74ebd5) 1;
+    justify-content: center;
+    margin: 30px auto 20px;
+}   
+
