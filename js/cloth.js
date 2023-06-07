@@ -15,7 +15,7 @@ function todayClothes(data) {
     if(midWinter) {
         clothIcon.src = "./image/midwinter.png";
         document.querySelector(".cloth-text1").innerHTML = "얼죽아도 고민하게 만드는 매서운 겨울 날씨!";
-        document.querySelector(".cloth-text2").innerHTML = "추천 옷차림: 패딩, 롱패딩, 두꺼운코트 누빔옷, 털모자, 목도리, 장갑, 두꺼운 기모제품<br><br>히트텍, 내복, 핫팩 등을 이용해서 체온 조절을 잘 해주세요!";
+        document.querySelector(".cloth-text2").innerHTML = "추천 옷차림: 패딩, 롱패딩, 두꺼운코트, 누빔옷, 털모자, 목도리, 장갑, 두꺼운 기모제품<br><br>히트텍, 내복, 핫팩 등을 이용해서 체온 조절을 잘 해주세요!";
     }
     else if(winter) {
         clothIcon.src = "./image/winter.png";
